@@ -1,0 +1,55 @@
+[project]
+# Whether to enable telemetry (default: true). No personal data is collected.
+enable_telemetry = true
+
+# ... (other project configurations)
+
+[features]
+# Show the prompt playground
+prompt_playground = true
+
+# Authorize users to upload files with messages
+multi_modal = true
+
+# Allows the user to use speech to text
+[features.speech_to_text]
+    enabled = false
+    # See all languages here https://github.com/JamesBrill/react-speech-recognition/blob/HEAD/docs/API.md#language-string
+    # language = "en-US"
+
+[UI]
+# Name of the app and chatbot.
+name = "MINERGUIDE"
+
+# Show the readme while the conversation is empty.
+show_readme_as_default = false
+
+# Specify custom CSS directly
+custom_css = """
+
+body {
+    background-image: url('https://wallpapercave.com/wp/wp8671862.jpg');
+   
+    margin: 0; /* Remove default body margin */
+    height: 100vh; /* Set full height */
+    overflow: hidden; /* Hide scroll bars */
+    
+
+}
+"""
+
+# Override default MUI light theme. (Check theme.ts)
+[UI.theme.light]
+    # ... (other light theme configurations)
+
+# Override default MUI dark theme. (Check theme.ts)
+[UI.theme.dark]
+    # ... (other dark theme configurations)
+
+# Hide the readme and settings sections
+[UI.sections]
+readme = false
+settings = true
+
+[meta]
+generated_by = "0.7.400"
